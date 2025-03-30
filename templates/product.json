@@ -45,6 +45,10 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "product_size_chart_link_em3Ew6": {
+          "type": "product-size-chart-link",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -106,6 +110,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "product_size_chart_link_em3Ew6",
         "buy_buttons",
         "description",
         "collapsible-row-0",

@@ -89,8 +89,6 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
-              {%- when 'product-size-chart-link' -%}
-                {{ block }} 
               {%- when 'text' -%}
                 <p
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -734,10 +732,6 @@
   "blocks": [
     {
       "type": "@app"
-    },
-    {
-      "type": "product-size-chart-link",
-      "name": "Size Chart Link"
     },
     {
       "type": "text",

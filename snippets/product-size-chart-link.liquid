@@ -6,4 +6,24 @@
   link: "https://fullchestcovers.com/pages/gildan-ultra-cotten-mens-size-chart", 
   layout: "horizontal" 
 -%}
+
+{%- assign product_tags = product.tags -%}
+{%- assign matched_url = '' -%}
+{%- for tag in product_tags -%}
+  {% case tag %}
+    {% when 'men' %}
+      {%- assign matched_url = tag -%}
+      {%- break -%}
+    {% when 'women' %}
+      {%- assign matched_url = tag -%}
+      {%- break -%}
+    {% when 'youth' %}
+      {%- assign matched_url = tag -%}
+      {%- break -%}
+    {% else %}      
+  {% endcase %}
+{%- endfor -%}
+
+{{ matched_url }}:{{ product.metafields.namespace.key.value }}
+
 </div>  

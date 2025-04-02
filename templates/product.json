@@ -31,6 +31,12 @@
             "heading_3": ""
           }
         },
+        "custom_liquid_MkJcCT": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div>\n  here we are ----errr\n{% render 'icon-with-text',\n  'block': {\n        'layout': 'vertical',\n\t'icon_1': 'shirt',\n\t'heading_1': 'hi',\n\t'icon_2': 'none',\n\t'heading_2': '',\n\t'icon_3': 'none',\n\t'heading_3': ''\n  }\n%}\n</div>"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -114,6 +120,7 @@
       "block_order": [
         "vendor",
         "icon_with_text_gUrQa7",
+        "custom_liquid_MkJcCT",
         "title",
         "caption",
         "price",

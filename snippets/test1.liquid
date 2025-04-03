@@ -10,6 +10,13 @@ here is test1
 	"heading_3": ""
 }
 {% endcapture %}
+
+{% assign content = icon_with_text_block | parse_json %}
+
+{% for item in content %}
+   {{ item.layout }}
+{% endfor %}
+
 {% render 'icon-with-text', block: icon_with_text_block %}
 <p>{{ test-parameter }}</p>
 <p>{{ icon_with_text_block }}!!!</p>

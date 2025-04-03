@@ -19,7 +19,11 @@ here is test1
   {{ item.icon_1 }}
 {% endfor %}
 
-{% render 'icon-with-text', block: '{{ content }} %}
+{% render 'icon-with-text', block: '{{ content }}' %}
 <p>{{ test-parameter }}</p>
 <p>{{ icon_with_text_block }}!!!</p>
 <p>{{ content.icon_2 }}2</p>
+
+
+{% render 'icon-with-text', layout: "vertical", icon_1: "shirt", heading_1: "<a href=\"/pages/gildan-ultra-cotten-mens-size-chart\" title=\"Men's Size Chart\">Size Chart</a>" %}
+ 

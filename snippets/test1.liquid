@@ -12,9 +12,10 @@ here is test1
 {% endcapture %}
 
 {% assign content = icon_with_text_block | parse_json %}
+{% assign content-obj = {{ content }} %}
 <p>content: {{ content }}</p>
 
-{% for item in content %}
+{% for item in content-obj %}
    {{ item }}
   {{ item.icon_1 }}
 {% endfor %}

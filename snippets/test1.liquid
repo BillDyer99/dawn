@@ -12,4 +12,4 @@ here is test1
 {% endcapture %}
 {% render 'icon-with-text', block: icon_with_text_block %}
 <p>{{ test-parameter }}</p>
-<p>{{ icon_with_text_block }}!!!</p>
+<p>{{ icon_with_text_block | json }}!!!</p>

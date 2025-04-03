@@ -12,15 +12,14 @@ here is test1
 {% endcapture %}
 
 {% assign content = icon_with_text_block | parse_json %}
-{% assign content-obj = {{ content }} %}
 <p>content: {{ content }}</p>
 
-{% for item in content-obj %}
+{% for item in content %}
    {{ item }}
   {{ item.icon_1 }}
 {% endfor %}
 
-{% render 'icon-with-text', block: content %}
+{% render 'icon-with-text', block: '{{ content }} %}
 <p>{{ test-parameter }}</p>
 <p>{{ icon_with_text_block }}!!!</p>
 <p>{{ icon_with_text_block.icon_2 }}2</p>

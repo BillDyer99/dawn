@@ -14,7 +14,7 @@ here is test1
 {% assign content = icon_with_text_block | parse_json %}
 <p>content: {{ content }}</p>
 
-{% for item in content %}
+{% for item in content.value %}
    {{ item }}
   {{ item.icon_1 }}
 {% endfor %}

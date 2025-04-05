@@ -12,18 +12,11 @@
   
 {% endcomment %}
 {%- if product.tags contains 'Men'  -%}
-    {{ product.metafields.custom.product_blank.urls.mens_size_chart.value }}
-
-.........................................  
-  {{ product | json }}
-.........................................
-  -men-
+    {{ product.metafields.custom.product_blank.value.urls.value.mens_size_chart.value }}
 {%- elsif product.tags contains 'Youth' -%}
-    product.custom.product_blank.urls.youth_size_chart }}
-  -youth-
+    {{ product.metafields.custom.product_blank.value.urls.value.youth_size_chart.value }}
 {%- elsif product.tags contains 'Women' -%} 
-  {{ product.custom.product_blank.urls.womens_size_chart }}
-  -wineb-
+    {{ product.metafields.custom.product_blank.value.urls.value.womens_size_chart.value }}
 {%- else -%}
   {{  }}
 {%- endif -%}

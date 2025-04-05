@@ -11,11 +11,11 @@
       FullChestCovers
   
 {% endcomment %}
-{%- if product.tags contains 'men'  -%}
+{%- if product.tags contains 'Men'  -%}
     {{ product.custom.product_blank.urls.mens_size_chart }}
-{%- elsif product.tags contains 'youth' -%}
+{%- elsif product.tags contains 'Youth' -%}
     product.custom.product_blank.urls.youth_size_chart }}
-{%- elsif product.tags contains 'women' -%} 
+{%- elsif product.tags contains 'Women' -%} 
   {{ product.custom.product_blank.urls.womens_size_chart }}
 {%- else -%}
   {{  }}

@@ -1,0 +1,107 @@
+
+
+{% assign layout = "vertical" %}
+{% assign icon_1 = "shirt"%}
+{% assign heading_1 = "<a href=\"/pages/gildan-ultra-cotten-mens-size-chart\" title=\"Men's Size Chart\">Size Chart</a>" %}
+{% assign icon_2 = "none"%}
+{% assign heading_2 = ""%}
+{% assign icon_3 = "none"%}
+{% assign heading_3 = ""%}
+
+{%- liquid
+  assign heading_1_empty = false
+  assign heading_2_empty = false
+  assign heading_3_empty = false
+  assign text_only_all_items = true
+
+  if heading_1 == empty
+    assign heading_1_empty = true
+  endif
+
+  if heading_2 == empty
+    assign heading_2_empty = true
+  endif
+
+  if heading_3 == empty
+    assign heading_3_empty = true
+  endif
+
+  if heading_1_empty == false and icon_1 != 'none' or image_1 != null
+    assign text_only_all_items = false
+  elsif heading_2_empty == false and icon_2 != 'none' or image_2 != null
+    assign text_only_all_items = false
+  elsif heading_3_empty == false and icon_3 != 'none' or image_3 != null
+    assign text_only_all_items = false
+  endif
+-%}
+<ul
+  class="icon-with-text icon-with-text--{{ layout }} list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}"
+  {{ block.shopify_attributes }}
+>
+  {%- unless heading_1_empty -%}
+    <li class="icon-with-text__item">
+      {%- if image_1 == null -%}
+        {%- render 'icon-accordion', icon: icon_1 -%}
+      {%- else -%}
+        <img
+          src="{{ image_1 | image_url }}"
+          {% if image_1.alt != blank %}
+            alt="{{ image_1.alt | escape }}"
+          {% else %}
+            role="presentation"
+          {% endif %}
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+      {%- endif -%}
+      <span class="h4 inline-richtext">
+        {{- heading_1 -}}
+      </span>
+    </li>
+  {%- endunless -%}
+  {%- unless heading_2_empty -%}
+    <li class="icon-with-text__item">
+      {%- if image_2 == null -%}
+        {% render 'icon-accordion', icon: icon_2 -%}
+      {%- else -%}
+        <img
+          src="{{ image_2 | image_url }}"
+          {% if image_2.alt != blank %}
+            alt="{{ image_2.alt | escape }}"
+          {% else %}
+            role="presentation"
+          {% endif %}
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+      {%- endif -%}
+      <span class="h4 inline-richtext">
+        {{- heading_2 -}}
+      </span>
+    </li>
+  {%- endunless -%}
+  {%- unless heading_3_empty -%}
+    <li class="icon-with-text__item">
+      {%- if image_3 == null -%}
+        {% render 'icon-accordion', icon: icon_3 -%}
+      {%- else -%}
+        <img
+          src="{{ image_3 | image_url }}"
+          {% if image_3.alt != blank %}
+            alt="{{ image_3.alt | escape }}"
+          {% else %}
+            role="presentation"
+          {% endif %}
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+      {%- endif -%}
+      <span class="h4 inline-richtext">
+        {{- heading_3 -}}
+      </span>
+    </li>
+  {%- endunless -%}
+</ul>

@@ -13,7 +13,7 @@
 {% endcomment %}
 {%- if product.tags contains 'Men'  -%}
     {{ product.custom.product_blank.urls.mens_size_chart }}
-  {{ product }}
+  {{ product.available }}
   -men-
 {%- elsif product.tags contains 'Youth' -%}
     product.custom.product_blank.urls.youth_size_chart }}

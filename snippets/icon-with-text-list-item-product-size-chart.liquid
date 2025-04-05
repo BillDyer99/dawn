@@ -13,5 +13,5 @@
 {% capture size_chart_url %}
     {% render "product-size-chart-url" %}
 {% endcapture %}
-{% assign size_chart_anchor_tag = '<a href="{{ product-size-chart-url }}" title="Size Chart">Size Chart</a>' %}
+{% assign size_chart_anchor_tag = '<a href="' | append: product-size-chart-url | append: '" title="Size Chart">Size Chart</a>' %}
 {% render 'icon-with-text-list-item', icon:"shirt", heading: size_chart_anchor_tag  %}

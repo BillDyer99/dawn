@@ -1,13 +1,24 @@
-{% capture icon_with_text_block %}
-{
-	layout: "vertical",
-	icon_1: "shirt",
-	heading_1: "<a href=\"/pages/gildan-ultra-cotten-mens-size-chart\" title=\"Men's Size Chart\">Size Chart</a>",
-	icon_2: "none",
-	heading_2: "",
-	icon_3: "none",
-	heading_3: ""
-}
-{% endcapture %}
-{% render 'icon-with-text', block: icon_with_text_block %}
+{% comment %}
+  Renders the correct product size chart url for the current product.
+
+  Accepts:
+      Nothing
+      
+  Usage:
+      {% render 'product-size-chart-link' %}
+
+  Author:
+      FullChestCovers
+  
+{% endcomment %}
+{%- if product.tags contains 'men'  -%}
+    {{ product.custom.product_blank.urls.mens_size_chart }}
+{%- elsif product.tags contains 'youth' -%}
+    product.custom.product_blank.urls.youth_size_chart }}
+{%- elsif product.tags contains 'women' -%} 
+  {{ product.custom.product_blank.urls.womens_size_chart }}
+{%- else -%}
+  {{  }}
+{%- endif -%}
+    
 

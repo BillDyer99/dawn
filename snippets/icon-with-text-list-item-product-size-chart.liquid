@@ -11,6 +11,6 @@
   
 {% endcomment %}
 {% capture size_chart_url %}
-    {{ render "product-size-chart-url" }}
+    {% render "product-size-chart-url" %}
 {% endcapture %}
 {%  render 'icon-with-text-list-item', icon="shirt", heading="{{ size_chart_url }}" %}

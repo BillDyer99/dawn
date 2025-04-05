@@ -12,7 +12,7 @@
   
 {% endcomment %}
 {%- if product.tags contains 'Men'  -%}
-    {{ product.custom.product_blank.urls.mens_size_chart }}
+    {{ product.metafields.custom.product_blank.urls.mens_size_chart.value }}
 
 .........................................  
   {{ product | json }}

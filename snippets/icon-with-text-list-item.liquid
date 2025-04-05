@@ -2,11 +2,11 @@
   Renders the beginning of icon with text list
 
   Accepts:
-  - image: {String} The name of the image to display.  The full url is not needed, it will be prepended if not supplied.
+  - link_image: {String} The name of the image to display.  The full url is not needed, it will be prepended if not supplied.
       Only an image or an icon can be provided, if both are provided the image will take precedence.
-  - icon: {String} The name of the icon to display. The full url is not needed, it will be prepended if not supplied.
+  - link_icon: {String} The name of the icon to display. The full url is not needed, it will be prepended if not supplied.
       Only an image or an icon can be provided, if both are provided the image will take precedence.
-  - heading: {String} The text to render.  Can be HTML markup.
+  - link_heading: {String} The text to render.  Can be HTML markup.
 
   Usage:
   {% render 'icon-with-text-list-item', icon: "Shirt", heading: "I'm a shirt" %}
@@ -16,13 +16,13 @@
   
 {% endcomment %}
     <li class="icon-with-text__item">
-      {%- if image == null -%}
-        {%- render 'icon-accordion', icon: icon -%}
+      {%- if link_image == null -%}
+        {%- render 'icon-accordion', icon: link_icon -%}
       {%- else -%}
         <img
-          src="{{ image | image_url }}"
-          {% if image.alt != blank %}
-            alt="{{ image.alt | escape }}"
+          src="{{ link_image | image_url }}"
+          {% if link_image.alt != blank %}
+            alt="{{ link_image.alt | escape }}"
           {% else %}
             role="presentation"
           {% endif %}
@@ -32,6 +32,6 @@
         >
       {%- endif -%}
       <span class="h4 inline-richtext">
-        {{- heading -}}
+        {{- link_heading -}}
       </span>
     </li>

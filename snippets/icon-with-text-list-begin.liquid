@@ -1,7 +1,7 @@
-{%- if layout | strip  == "" -%}
+{%- if (layout | strip)  == "" -%}
     {%- assign layout = "vertical" -%}
 {%- endif -%}
-{%- if text_only_all_items | strip  == "" -%}
+{%- if (text_only_all_items | strip)  == "" -%}
     {%- assign layout = "false" -%}
 {%- endif -%}
 

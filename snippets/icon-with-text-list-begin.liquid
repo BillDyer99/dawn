@@ -1,0 +1,11 @@
+{%- if layout | strip  == "" -%}
+    {%- assign layout = "vertical" -%}
+{%- endif -%}
+{%- if text_only_all_items | strip  == "" -%}
+    {%- assign layout = "false" -%}
+{%- endif -%}
+
+<ul
+  class="icon-with-text icon-with-text--{{ layout }} list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}"
+  {{ shopify_attributes }}
+>

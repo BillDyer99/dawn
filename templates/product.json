@@ -32,7 +32,7 @@
         "custom_liquid_fgnnpr": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% capture size_chart_url %}\n    {% render \"product-size-chart-url\" %}\n{% endcapture %}\n{{ size_chart_url }}\n{% assign size_chart_anchor_tag = '<a href=\"' | append: size_chart_url | append: '\" title=\"Size Chart\">Size Chart</a>' %}\n{{ size_chart_anchor_tag }}"
+            "custom_liquid": "{% capture size_chart_url %}\n    {% render \"product-size-chart-url\" %}\n{% endcapture %}\n{{ size_chart_url }} \n{{ product.metafields.custom.product_blank.value.urls.value.mens_size_chart.value }}"
           }
         },
         "caption": {

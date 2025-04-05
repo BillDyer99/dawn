@@ -1,0 +1,37 @@
+{% comment %}
+  Renders the beginning of icon with text list
+
+  Accepts:
+  - image: {String} The name of the image to display.  The full url is not needed, it will be prepended if not supplied.
+      Only an image or an icon can be provided, if both are provided the image will take precedence.
+  - icon: {String} The name of the icon to display. The full url is not needed, it will be prepended if not supplied.
+      Only an image or an icon can be provided, if both are provided the image will take precedence.
+  - heading: {String} The text to render.  Can be HTML markup.
+
+  Usage:
+  {% render 'icon-with-text-list-item', icon: "Shirt", heading: "I'm a shirt" %}
+
+  Author:
+  FullChestCovers
+  
+{% endcomment %}
+    <li class="icon-with-text__item">
+      {%- if image == null -%}
+        {%- render 'icon-accordion', icon: icon -%}
+      {%- else -%}
+        <img
+          src="{{ image | image_url }}"
+          {% if image.alt != blank %}
+            alt="{{ image.alt | escape }}"
+          {% else %}
+            role="presentation"
+          {% endif %}
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+      {%- endif -%}
+      <span class="h4 inline-richtext">
+        {{- heading -}}
+      </span>
+    </li>

@@ -1,14 +1,34 @@
+{% comment %}
+  Renders icon with text block
 
-{% assign stripped_layout = layout | strip %}
-{% assign stripped_text_only_all_items = text_only_all_items | strip %}
+  Accepts:
+  - layout: {String} either 'horizontal' or 'vertical'. Controls the formatting
+        of the items in the list.  Default is 'vertical'.
+  - text_only_all_items: {Boolean} whether or not all the following list items
+        will contain only text.  Default is false.
+  - shopify_attributes: {String} Extra attributes to render in the class definition.
+        The default is to read these values from the environment if not passed in.
 
-{%- if stripped_layout  == "" -%}
-    {%- assign layout = "vertical" -%}
-{%- endif -%}
-{%- if stripped_text_only_all_items == "" -%}
-    {%- assign text_only_all_items = "false" -%}
-{%- endif -%}
+  Usage:
+  {% render 'icon-with-text-list-begin',
+    layout: "horizontal", text_only_all_items: false
+  %}
+{% endcomment %}
+{%- liquid
 
+if layout == nil
+   assign layout = layout | strip
+else
+   assign layout = ''
+endif
+if layout == blank
+   assign layout = 'vertical'
+endif
+
+if text_only_all_items == nil
+   assign text_only_all_items = false
+endif
+-%}
 <ul
   class="icon-with-text icon-with-text--{{ layout }} list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}"
   {{ shopify_attributes }}

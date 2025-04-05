@@ -19,18 +19,6 @@
             "text_style": "uppercase"
           }
         },
-        "icon_with_text_gUrQa7": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "shirt",
-            "heading_1": "<a href=\"/pages/gildan-ultra-cotten-mens-size-chart\" title=\"Men's Size Chart\">Size Chart</a>",
-            "icon_2": "none",
-            "heading_2": "",
-            "icon_3": "none",
-            "heading_3": ""
-          }
-        },
         "custom_liquid_MkJcCT": {
           "type": "custom_liquid",
           "settings": {
@@ -119,7 +107,6 @@
       },
       "block_order": [
         "vendor",
-        "icon_with_text_gUrQa7",
         "custom_liquid_MkJcCT",
         "title",
         "caption",

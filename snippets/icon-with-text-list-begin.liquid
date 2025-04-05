@@ -1,8 +1,12 @@
-{%- if (layout | strip)  == "" -%}
+
+{% assign stripped_layout = layout | strip %}
+{% assign stripped_text_only_all_items = text_only_all_items | strip %}
+
+{%- if stripped_layout  == "" -%}
     {%- assign layout = "vertical" -%}
 {%- endif -%}
-{%- if (text_only_all_items | strip)  == "" -%}
-    {%- assign layout = "false" -%}
+{%- if stripped_text_only_all_items == "" -%}
+    {%- assign text_only_all_items = "false" -%}
 {%- endif -%}
 
 <ul

@@ -1,10 +1,14 @@
 
+{% if product.tags contains 'men'  %}
+{% assign size_chart_url = '<a href="/pages/gildan-ultra-cotten-mens-size-chart" title="Size Chart">Size Chart</a>' %}
 
+{% endif   %}
+    
 {% assign layout = "vertical" %}
 {% assign icon_1 = "shirt"%}
 {% assign heading_1 = '<a href="/pages/gildan-ultra-cotten-mens-size-chart" title="Size Chart">Size Chart</a>' %}
-{% assign icon_2 = "none"%}
-{% assign heading_2 = ""%}
+{% assign icon_2 = "shirt"%}
+{% assign heading_2 = "this is a thing"%}
 {% assign icon_3 = "none"%}
 {% assign heading_3 = ""%}
 {% assign shopify_attributes = ""%}

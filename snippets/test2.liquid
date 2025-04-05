@@ -7,6 +7,7 @@
 {% assign heading_2 = ""%}
 {% assign icon_3 = "none"%}
 {% assign heading_3 = ""%}
+{% assign shopify_attributes = ""%}
 
 {%- liquid
   assign heading_1_empty = false
@@ -38,7 +39,7 @@
 h{{ heading_1_empty }}h
 <ul
   class="icon-with-text icon-with-text--{{ layout }} list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}"
-  {{ block.shopify_attributes }}
+  {{ shopify_attributes }}
 >
   {%- unless heading_1_empty -%}
     <li class="icon-with-text__item">

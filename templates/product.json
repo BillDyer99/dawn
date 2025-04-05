@@ -34,7 +34,7 @@
         "custom_liquid_MkJcCT": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div>\n  here we are ----errr\n{% render 'icon-with-text',\n  'block': {\n        'layout': 'vertical',\n\t'icon_1': 'shirt',\n\t'heading_1': 'hi',\n\t'icon_2': 'none',\n\t'heading_2': '',\n\t'icon_3': 'none',\n\t'heading_3': ''\n  }\n%}\n</div>"
+            "custom_liquid": "<div>\n  here we are ----errr\n{% render 'icon-with-text-list-begin',\n    layout: \"horizontal\", text_only_all_items: false\n  %} \n{% render 'icon-with-text-list-item', icon: \"shirt\", heading: \"I'm a shirt\" %}\n{% render 'icon-with-text-list-end' %}\n</div>"
           }
         },
         "title": {

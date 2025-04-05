@@ -13,10 +13,13 @@
 {% endcomment %}
 {%- if product.tags contains 'Men'  -%}
     {{ product.custom.product_blank.urls.mens_size_chart }}
+  -men-
 {%- elsif product.tags contains 'Youth' -%}
     product.custom.product_blank.urls.youth_size_chart }}
+  -youth-
 {%- elsif product.tags contains 'Women' -%} 
   {{ product.custom.product_blank.urls.womens_size_chart }}
+  -wineb-
 {%- else -%}
   {{  }}
 {%- endif -%}

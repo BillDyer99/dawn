@@ -1,12 +1,15 @@
 
 {% if product.tags contains 'men'  %}
-{% assign size_chart_url = '<a href="/pages/gildan-ultra-cotten-mens-size-chart" title="Size Chart">Size Chart</a>' %}
-
+{% assign size_chart_url = '<a href="{{ product.custom.product_blank.urls.mens_size_chart }}" title="Size Chart">Size Chart</a>' %}
+{% elsif product.tags contains 'youth'  == 'surveystart' %}
+{% assign size_chart_url = '<a href="{{ product.custom.product_blank.urls.youth_size_chart }}" title="Size Chart">Size Chart</a>' %}
+{% else %}}
+{% assign size_chart_url = '<a href="{{ product.custom.product_blank.urls.womens_size_chart }}" title="Size Chart">Size Chart</a>' %}
 {% endif   %}
     
 {% assign layout = "vertical" %}
 {% assign icon_1 = "shirt"%}
-{% assign heading_1 = '<a href="/pages/gildan-ultra-cotten-mens-size-chart" title="Size Chart">Size Chart</a>' %}
+{% assign heading_1 = '<a href="{{ size_chart_url }}" title="Size Chart">Size Chart</a>' %}
 {% assign icon_2 = "shirt"%}
 {% assign heading_2 = "this is a thing"%}
 {% assign icon_3 = "none"%}

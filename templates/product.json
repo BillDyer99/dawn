@@ -34,6 +34,12 @@
           "type": "price",
           "settings": {}
         },
+        "custom_liquid_cwWr66": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{{ product.description }}\n  ----\n   {{ product.metafields.custom.product_design.value.product_description.value }}\n  ----\n   {{ product.metafields.custom.product_blank.value.product_description.value }}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -101,6 +107,7 @@
         "title",
         "caption",
         "price",
+        "custom_liquid_cwWr66",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",

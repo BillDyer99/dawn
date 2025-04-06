@@ -197,7 +197,7 @@
     "custom_liquid_AEqiac": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{%- render 'product-consolidated-description' -%}\n {%- render 'product-consolidated-features' -%}",
+        "custom_liquid": "{%- render 'multicolumn-begin' -%}\n{%- render 'multicolumn-end' -%}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52

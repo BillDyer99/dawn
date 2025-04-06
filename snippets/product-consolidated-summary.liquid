@@ -1,10 +1,10 @@
 {%- comment -%}
-  Renders description text consolidated from the blank and design metadata attached to a product, and the product description.
+  Renders description summary text consolidated from the blank and design metadata attached to a product
 
   Accepts:
       nothing
   Usage:
-  {%- render 'product-consolidated-description' -%}
+  {%- render 'product-consolidated-summary' -%}
 
   Author:
   FullChestCovers
@@ -13,12 +13,12 @@
 {%- comment -%}
 The descriptions are displayed in order from most specific (product) to least specific (blank)
 {%- endcomment -%}
-{%- capture consolidated_description -%}
+{%- capture consolidated_summary -%}
   {{ product.description }}
   {{ product.metafields.custom.product_design.value.description.value }}
   {{ product.metafields.custom.product_blank.value.product_description.value }}
 {%- endcapture -%}
-{%- if consolidated_description != empty and consolidated_description != blank -%}
-  {{ consolidated_description }}
+{%- if consolidated_summary != empty and consolidated_summary != blank -%}
+  {{ consolidated_summary }}
 {%- endif -%}
  

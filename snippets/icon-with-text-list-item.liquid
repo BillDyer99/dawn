@@ -1,4 +1,4 @@
-{% comment %}
+{%- comment -%}
   Renders the beginning of icon with text list
 
   Accepts:
@@ -14,18 +14,18 @@
   Author:
   FullChestCovers
   
-{% endcomment %}
+{%- endcomment -%}
     <li class="icon-with-text__item">
       {%- if image == null -%}
         {%- render 'icon-accordion', icon: icon -%}
       {%- else -%}
         <img
           src="{{ image | image_url }}"
-          {% if image.alt != blank %}
+          {%- if image.alt != blank -%}
             alt="{{ image.alt | escape }}"
-          {% else %}
+          {%- else -%}
             role="presentation"
-          {% endif %}
+          {%- endif -%}
           height="auto"
           width="auto"
           loading="lazy"

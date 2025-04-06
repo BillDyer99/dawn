@@ -23,11 +23,10 @@
           "type": "title",
           "settings": {}
         },
-        "caption": {
-          "type": "text",
+        "custom_liquid_tpXcnc": {
+          "type": "custom_liquid",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "custom_liquid": "{%- render 'product-consolidated-summary' -%}"
           }
         },
         "price": {
@@ -37,7 +36,7 @@
         "custom_liquid_cwWr66": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{{ product.description }}\n  ----\n   {{ product.metafields.custom.product_design.value.description.value }}\n  ----\n   {{ product.metafields.custom.product_blank.value.product_description.value }}"
+            "custom_liquid": "----\n{%- render 'product-consolidated-description' -%}\n  ----"
           }
         },
         "variant_picker": {
@@ -105,7 +104,7 @@
       "block_order": [
         "vendor",
         "title",
-        "caption",
+        "custom_liquid_tpXcnc",
         "price",
         "custom_liquid_cwWr66",
         "variant_picker",
@@ -151,10 +150,64 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "multicolumn_UXnaCx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Pb7xtj": {
+          "type": "column",
+          "settings": {
+            "title": "Description",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qmNF8h": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Pb7xtj",
+        "column_qmNF8h"
+      ],
+      "settings": {
+        "title": "Product Details",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_AEqiac": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- render 'product-consolidated-description' -%}\n {%- render 'product-consolidated-features' -%}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "multicolumn_UXnaCx",
+    "custom_liquid_AEqiac"
   ]
 }

@@ -37,7 +37,7 @@
         "custom_liquid_cwWr66": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{{ product.description }}\n  ----\n   {{ product.metafields.custom.product_design.value.product_description.value }}\n  ----\n   {{ product.metafields.custom.product_blank.value.product_description.value }}"
+            "custom_liquid": "{{ product.description }}\n  ----\n   {{ product.metafields.custom.product_design.value.description.value }}\n  ----\n   {{ product.metafields.custom.product_blank.value.product_description.value }}"
           }
         },
         "variant_picker": {

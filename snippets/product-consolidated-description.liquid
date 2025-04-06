@@ -11,9 +11,11 @@
   
 {%- endcomment -%}
 {%- capture consolidated_description -%}
-   {{ product.metafields.custom.product_blank.value.product_description.value }}
    {{ product.description }}
+   {{ product.metafields.custom.product_design.value.product_description.value }}
+   {{ product.metafields.custom.product_blank.value.product_description.value }}
 {%- endcapture -%}
 {%- if consolidated_description != empty and consolidated_description != blank -%}
   {{ consolidated_description }}
 {%- endif -%}
+ 

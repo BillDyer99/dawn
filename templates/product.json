@@ -19,12 +19,6 @@
             "text_style": "uppercase"
           }
         },
-        "custom_liquid_MkJcCT": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div>\n{% render 'icon-with-text-list-begin',\n    layout: \"horizontal\", text_only_all_items: false %}\n \n{% render 'icon-with-text-list-item-product-size-chart' %}\n\n{% render 'icon-with-text-list-end' %} \n\n</div>"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -62,6 +56,12 @@
           "type": "description",
           "settings": {}
         },
+        "custom_liquid_MkJcCT": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div>\n{% render 'icon-with-text-list-begin',\n    layout: \"horizontal\", text_only_all_items: false %}\n \n{% render 'icon-with-text-list-item-product-size-chart' %}\n\n{% render 'icon-with-text-list-end' %} \n\n</div>"
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
@@ -76,15 +76,6 @@
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
             "content": "",
             "page": ""
           }
@@ -107,7 +98,6 @@
       },
       "block_order": [
         "vendor",
-        "custom_liquid_MkJcCT",
         "title",
         "caption",
         "price",
@@ -115,9 +105,9 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "custom_liquid_MkJcCT",
         "collapsible-row-0",
         "collapsible-row-1",
-        "collapsible-row-2",
         "collapsible-row-3",
         "share"
       ],

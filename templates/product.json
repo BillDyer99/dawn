@@ -85,7 +85,7 @@
           "settings": {
             "heading": "Returns",
             "icon": "return",
-            "content": "",
+            "content": "<p>We have a 30-day return policy, which means you have 30 days after receiving your item to request a return. </p><p>For details, please read our <a href=\"/policies/refund-policy\" title=\"Refund Policy\">Return Policy</a></p>",
             "page": ""
           }
         },

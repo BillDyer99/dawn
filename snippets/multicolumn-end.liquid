@@ -1,0 +1,73 @@
+{%- comment -%}
+  Renders feature text consolidated from the blank and design metadata attached to a product, and the features for the product.
+
+  Accepts:
+      nothing
+  Usage:
+  {%- render 'multicolumn-end' -%}
+
+  Author:
+  FullChestCovers
+  
+{%- endcomment -%}
+{%- liquid
+   if show_mobile_slider == nil 
+       assign show_mobile_slider = false
+   endif
+   if column_count == nil
+       assign column_count = 2
+   endif
+   if button_label == nil 
+       assign button_label = ""
+   endif
+   if button_link == nil 
+       assign button_link = ""
+   endif
+
+-%}
+
+      </ul>
+
+      {%- if show_mobile_slider -%}
+        <div class="slider-buttons large-up-hide">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="{{ 'general.slider.previous_slide' | t }}"
+          >
+            <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+          </button>
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ column_count }}</span>
+          </div>
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="{{ 'general.slider.next_slide' | t }}"
+          >
+            <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+          </button>
+        </div>
+      {%- endif -%}
+    </slider-component>
+    <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+      {%- if button_label != blank -%}
+        <a
+          class="button button--primary"
+          {% if button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ button_link }}"
+          {% endif %}
+        >
+          {{ button_label | escape }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,175 @@
+{%- comment -%}
+  Renders feature text consolidated from the blank and design metadata attached to a product, and the features for the product.
+
+  Accepts:
+      nothing
+  Usage:
+  {%- render 'multicolumn-end' -%}
+
+  Author:
+  FullChestCovers
+  
+{%- endcomment -%}
+{%- comment -%}
+// use the highest among all the columns  	  
+image_aspect_ratio	  
+
+image default blank
+title default blank
+text default blank
+link_label default blank
+link default blank
+button_link default blank
+column_alignment default "left" options "left", "center"
+shopify_attributes default blank
+image_ratio default "adapt", options: "adapt","portrait","square","circle",
+image_width default "full", options: "full","third","half",
+spacing_grid_horizontal default 0? 1?
+page_width default ? 
+  
+{%- endcomment -%}
+{%- liquid
+   if image_aspect_ratio == nil 
+       assign image_aspect_ratio = 1
+   endif
+   if image == nil or image == blank
+       assign image = ""
+   endif
+   if title == nil or title == blank
+       assign title = ""
+   endif
+   if text == nil or text == blank
+       assign text = ""
+   endif
+   if link_label == nil or link_label == blank
+       assign link_label = ""
+   endif
+   if link == nil or link == blank
+       assign link = ""
+   endif
+   if button_link == nil or button_link == blank
+       assign button_link = ""
+   endif
+   if column_alignment == nil or column_alignment == blank
+       assign column_alignment = "left"
+   endif
+   if column_alignment != "left" and column_alignment != "center"
+       assign column_alignment = "left"
+   endif
+   if shopify_attributes == nil or shopify_attributes == blank
+       assign shopify_attributes = ""
+   endif
+
+   if image_ratio == nil or image_ratio == blank
+       assign image_ratio = "adapt"
+   endif
+   assign valid_image_ratios = "adapt,portrait,square,circle" | split: ','
+   if valid_image_ratios contains image_ratio
+   else
+       assign image_ratio = "adapt"
+   endif
+
+   if image_width == nil or image_width == blank
+       assign image_width = "full"
+   endif
+   assign valid_image_widths = "full,third,half" | split: ','
+   if valid_image_widths contains image_width
+   else
+       assign image_width = "full"
+   endif
+   
+   if spacing_grid_horizontal == nil 
+       assign spacing_grid_horizontal = 0
+   endif
+   if page_width == nil
+       assign page_width = 1600
+   endif
+   
+-%}        
+        
+        {%- assign empty_column = '' -%}
+          {%- if image == blank
+            and title == blank
+            and text == blank
+            and link_label == blank
+          -%}
+            {%- assign empty_column = ' multicolumn-list__item--empty' -%}
+          {%- endif -%}
+
+          <li
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="multicolumn-list__item grid__item{% if swipe_on_mobile %} slider__slide{% endif %}{% if column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ shopify_attributes }}
+            {% if animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            <div class="multicolumn-card content-container">
+              {%- if image != blank -%}
+                {% if image_ratio == 'adapt' or image_ratio == 'circle' %}
+                  {% assign spaced_image = true %}
+                {% endif %}
+                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ image_width }}-width{% if image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                  <div
+                    class="media media--transparent media--{{ image_ratio }}"
+                    {% if image_ratio == 'adapt' %}
+                      style="padding-bottom: {{ 1 | divided_by: image_aspect_ratio | times: 100 }}%;"
+                    {% endif %}
+                  >
+                    {%- liquid
+                      assign number_of_columns = columns_desktop
+                      assign number_of_columns_mobile = columns_mobile
+                      assign grid_space_desktop = number_of_columns | minus: 1 | times: spacing_grid_horizontal | plus: 100 | append: 'px'
+                      assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: spacing_grid_horizontal | plus: 100 | append: 'px'
+                      assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+                      if image_width == 'half'
+                        assign image_width = 0.5
+                      elsif image_width == 'third'
+                        assign image_width = 0.33
+                      else
+                        assign image_width = 1
+                      endif
+                    -%}
+                    {% capture sizes %}
+                      (min-width: {{ page_width }}px) calc(({{ page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
+                      (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
+                      (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
+                      calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
+                    {% endcapture %}
+                    {{
+                      image
+                      | image_url: width: 3200
+                      | image_tag:
+                        widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                        sizes: sizes,
+                        class: 'multicolumn-card__image'
+                    }}
+                  </div>
+                </div>
+              {%- endif -%}
+              <div class="multicolumn-card__info">
+                {%- if title != blank -%}
+                  <h3 class="inline-richtext">{{ title }}</h3>
+                {%- endif -%}
+                {%- if text != blank -%}
+                  <div class="rte">{{ text }}</div>
+                {%- endif -%}
+                {%- if link_label != blank -%}
+                  <a
+                    class="link animate-arrow"
+                    {% if link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ link }}"
+                    {% endif %}
+                  >
+                    {{- link_label | escape -}}
+                    <span class="svg-wrapper"
+                      ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
+                    >
+                  </a>
+                {%- endif -%}
+              </div>
+            </div>
+          </li>

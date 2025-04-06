@@ -1,0 +1,127 @@
+{%- comment -%}
+  Renders feature text consolidated from the blank and design metadata attached to a product, and the features for the product.
+
+  Accepts:
+      nothing
+  Usage:
+  {%- render 'product-consolidated-features' -%}
+
+  Author:
+  FullChestCovers
+  
+{%- endcomment -%}
+
+
+
+{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+   {%- comment -%}   
+column_count - set to what needed
+columns_mobile default "1", values 1 or 2
+swipe_on_mobile default "false"
+color_scheme default "scheme-1"
+background_style default "primary"
+text_boxes_border_thickness default 0
+text_boxes_shadow_opacity default 0
+title default ""
+animations_reveal_on_scroll default ? false ? 
+heading_size default "h1", values: "h2","h1","h0","hxl", "hxxl",
+button_label default ""
+button_link default ""
+columns_desktop      "min": 1,"max": 6,"step": 1,"default": 3,
+{%- endcomment -%}
+{%- liquid
+   if column_count == nil 
+       assign column_count = 2
+   endif
+   if columns_mobile == nil or columns_mobile == blank
+       assign columns_mobile = "1"
+   endif
+   if swipe_on_mobile == nil or swipe_on_mobile == blank
+       assign swipe_on_mobile = "false"
+   endif
+   if color_scheme == nil or color_scheme == blank
+       assign color_scheme = "scheme-1"
+   endif
+   if background_style == nil or background_style == blank
+       assign background_style = "primary"
+   endif
+   if text_boxes_border_thickness == nil
+       assign text_boxes_border_thickness = 0
+   endif
+   if text_boxes_shadow_opacity == nil
+       assign text_boxes_shadow_opacity = 0
+   endif
+   if title == nil 
+       assign title = ""
+   endif
+   if animations_reveal_on_scroll == nil
+       assign animations_reveal_on_scroll = false
+   endif
+   if heading_size == nil
+       assign heading_size = "h1"
+   endif
+   assign validHeadingSizes = "h2,h1,h0,hxl,hxxl" | split: ','
+   if validHeadingSizes contains heading_size
+   else
+       assign heading_size = "h1"
+   endif
+   if button_label == nil 
+       assign button_label = ""
+   endif
+   if button_link == nil 
+       assign button_link = ""
+   endif  
+   if columns_desktop == nil 
+       assign columns_desktop = 3
+   endif
+   if columns_desktop < 1 or columns_desktop > 6 
+       assign columns_desktop = 3
+   endif
+
+  assign columns_mobile_int = columns_mobile | plus: 0
+  assign show_mobile_slider = false
+  if swipe_on_mobile and column_count > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
+-%}
+
+<div class="multicolumn color-{{ color_scheme }} gradient{% unless background_style == 'none' and text_boxes_border_thickness > 0 or text_boxes_shadow_opacity > 0 %} background-{{ background_style }}{% endunless %}{% if title == blank %} no-heading{% endif %}">
+  <div
+    class="page-width section-{{ section.id }}-padding isolate{% if animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    {% if animations_reveal_on_scroll %}
+      data-cascade
+    {% endif %}
+  >
+    {%- unless title == blank -%}
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
+        <h2 class="title inline-richtext {{ heading_size }}">
+          {{ title }}
+        </h2>
+        {%- if button_label != blank and show_mobile_slider -%}
+          <a href="{{ button_link }}" class="link underlined-link large-up-hide">
+            {{- button_label | escape -}}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+    <slider-component class="slider-mobile-gutter">
+      <ul
+        class="multicolumn-list contains-content-container grid grid--{{ columns_mobile }}-col-tablet-down grid--{{ columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
+        id="Slider-{{ section.id }}"
+        role="list"
+      >

@@ -1,0 +1,14 @@
+{% comment %}
+  Renders a text-with-icon item that links to the appropriate size chart for this product.
+
+  Accepts:
+      nothing
+  Usage:
+  {% render 'icon-with-text-list-item-care-instructions' %}
+
+  Author:
+  FullChestCovers
+  
+{% endcomment %}
+{% assign anchor_tag = '<a href="" title="Care Instructions">Care Instructions</a>' %}
+{% render 'icon-with-text-list-item', icon:"heart", heading: anchor_tag  %}

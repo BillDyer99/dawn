@@ -67,7 +67,7 @@
           "settings": {
             "heading": "Sustainability",
             "icon": "leaf",
-            "content": "<p>We believe we have to take care of our planet and all the people in it.</p><p><a href=\"https://www.gildan.com/\" target=\"_blank\" title=\"Gildan\">Gildan </a>manufactures the T-Shirts we use.</p><p><a href=\"http://www.gildan.com/us/en/sustainability\" target=\"_blank\" title=\"Gildan Sustainability\">Learn more</a> about their sustainability practices.</p><p><a href=\"/pages/about-our-products\" title=\"About our Products\">Learn more</a> about our products.</p><p></p>",
+            "content": "<p><strong>We believe we have to take care of our planet.</strong></p><p>We believe caring for our planet means caring for the people on it, too.  <br/><br/>That’s why we choose to source our T-shirts from <a href=\"https://www.gildan.com/\" target=\"_blank\" title=\"Gildan\">Gildan</a> - a company known for its commitment to ethical labor and sustainable manufacturing.</p><p>👉 <a href=\"#\">Learn more about Gildan’s sustainability practices.</a></p><p></p>",
             "page": ""
           }
         },

@@ -28,6 +28,13 @@
             "menu": "footer-info-menu"
           }
         },
+        "link_list_p7YgxD": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Policies",
+            "menu": "footer-policy-menu"
+          }
+        },
         "footer-2": {
           "type": "text",
           "settings": {
@@ -39,6 +46,7 @@
       "block_order": [
         "footer-0",
         "footer-1",
+        "link_list_p7YgxD",
         "footer-2"
       ],
       "settings": {

@@ -15,7 +15,7 @@ The summaries are displayed in order from most specific (product) to least speci
 {%- endcomment -%}
 {%- capture consolidated_summary -%}
   {{ product.metafields.custom.product_summary.value }}
-  {{ product.metafields.custom.product_design.value.description.value }}
+  {{ product.metafields.custom.product_design.value.description_summary.value }}
   {{ product.metafields.custom.product_blank.value.product_description_summary.value }}
 {%- endcapture -%}
 {%- if consolidated_summary != empty and consolidated_summary != blank -%}

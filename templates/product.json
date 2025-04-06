@@ -197,7 +197,7 @@
     "custom_liquid_AEqiac": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{%- capture description_text -%}\n      {%- render 'product-consolidated-description' -%}\n{%- endcapture -%}\n \n{%- capture feature_text -%}\n      {%- render 'product-consolidated-features' -%}\n{%- endcapture -%}\n\n{%- render 'multicolumn-begin', title : 'Product Details', column_count: 2, columns_mobile: 2,\ncolumns_desktop: 2 -%}\n\n{%- render 'multicolumn-column', title: 'Description', text: description_text -%}\n\n{%- render 'multicolumn-column', title: 'Features', text: feature_text -%}\n\n{%- render 'multicolumn-end' -%}",
+        "custom_liquid": "{%- liquid\n    assign columns = 2\n    assign button_label = \"\"\n    assign button_link = \"\"\n%}\n\n{%- capture description_text -%}\n\n{%- render 'product-consolidated-description' -%}\n{%- endcapture -%}\n \n{%- capture feature_text -%}\n      {%- render 'product-consolidated-features' -%}\n{%- endcapture -%}\n\n{%- render 'multicolumn-begin', title : 'Product Details', column_count: columns , columns_mobile: columns ,\ncolumns_desktop: columns,\nbutton_label: button_label,\nbutton_link: button_link  -%}\n\n{%- render 'multicolumn-column', title: 'Description', text: description_text -%}\n\n{%- render 'multicolumn-column', title: 'Features', text: feature_text -%}\n\n{%- render 'multicolumn-end', button_label: button_label,\nbutton_link: button_link,\ncolumn_count: column_count -%}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52

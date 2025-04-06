@@ -1,14 +1,14 @@
-{% comment %}
+{%- comment -%}
   Renders a text-with-icon item that links to the care instruction page
 
   Accepts:
       nothing
   Usage:
-  {% render 'icon-with-text-list-item-care-instructions' %}
+  {%- render 'icon-with-text-list-item-care-instructions' -%}
 
   Author:
   FullChestCovers
   
-{% endcomment %}
-{% assign anchor_tag = '<a href="https://fullchestcovers.com/pages/care-instructions" title="Care Instructions"> Care Instructions</a>' %}
-{% render 'icon-with-text-list-item', icon:"heart", heading: anchor_tag  %}
+{%- endcomment -%}
+{%- assign anchor_tag = '<a href="https://fullchestcovers.com/pages/care-instructions" title="Care Instructions"> Care Instructions</a>' -%}
+{%- render 'icon-with-text-list-item', icon:"heart", heading: anchor_tag  -%}

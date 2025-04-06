@@ -164,7 +164,7 @@
     "custom_liquid_Pgxmyt": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% assign product_to_show = blank %}\n\n{% render 'card-product', card_product: product, extend_height: false %}",
+        "custom_liquid": "{%- style -%}\n.product-details-other-style  .card-wrapper \n{\n    width: 10%;\n    height: 10%\n}\n\n{%- endstyle -%}\n\n<span class='product-details-other-style'>\n{% assign product_to_show = blank %}\n\n{% render 'card-product', card_product: product, extend_height: false %}\n</span>\n\n<span class='product-details-other-style'>\n{% assign product_to_show = blank %}\n\n{% render 'card-product', card_product: product, extend_height: false %}\n</span>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52

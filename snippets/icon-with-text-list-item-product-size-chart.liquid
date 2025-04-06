@@ -1,17 +1,17 @@
-{% comment %}
+{%- comment -%}
   Renders a text-with-icon item that links to the appropriate size chart for this product.
 
   Accepts:
       nothing
   Usage:
-  {% render 'icon-with-text-list-item-product-size-chart' %}
+  {%- render 'icon-with-text-list-item-product-size-chart' -%}
 
   Author:
   FullChestCovers
   
-{% endcomment %}
-{% capture size_chart_url %}
-    {% render "product-size-chart-url" %}
-{% endcapture %}
-{% assign size_chart_anchor_tag = '<a href="' | append: size_chart_url | append: '" title="Size Chart">Size Chart</a>' %}
-{% render 'icon-with-text-list-item', icon:"shirt", heading: size_chart_anchor_tag  %}
+{%- endcomment -%}
+{%- capture size_chart_url -%}
+    {%- render "product-size-chart-url" -%}
+{%- endcapture -%}
+{%- assign size_chart_anchor_tag = '<a href="' | append: size_chart_url | append: '" title="Size Chart">Size Chart</a>' -%}
+{%- render 'icon-with-text-list-item', icon:"shirt", heading: size_chart_anchor_tag  -%}

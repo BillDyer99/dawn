@@ -13,11 +13,11 @@
 {%- comment -%}
 The features are displayed in order from most specific (design) to least specific (blank)
 {%- endcomment -%}
-{%- capture consolidated_summary -%}
+{%- capture consolidated_features -%}
   {{ product.metafields.custom.product_design.value.features.value }}
   {{ product.metafields.custom.product_blank.value.product_features.value }}
 {%- endcapture -%}
-{%- if consolidated_summary != empty and consolidated_summary != blank -%}
-  {{ consolidated_summary }}
+{%- if consolidated_features != empty and consolidated_features != blank -%}
+  {{ consolidated_features }}
 {%- endif -%}
  

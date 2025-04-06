@@ -1,14 +1,14 @@
 {%- comment -%}
-  Renders a text-with-icon item that links to the about us page
+  Renders a text-with-icon item that links to the about our products page
 
   Accepts:
       nothing
   Usage:
-  {%- render 'icon-with-text-list-item-about-us' -%}
+  {%- render 'icon-with-text-list-item-about-our-products' -%}
 
   Author:
   FullChestCovers
   
 {%- endcomment -%}
-{%- assign anchor_tag = '<a href="https://fullchestcovers.com/pages/about-us" title="About Us">About Us</a>' -%}
+{%- assign anchor_tag = '<a href="https://fullchestcovers.com/pages/about-our-products" title="About Us">About Us</a>' -%}
 {%- render 'icon-with-text-list-item', icon:"silhouette", heading: anchor_tag  -%}

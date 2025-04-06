@@ -62,15 +62,6 @@
             "custom_liquid": "<div>\n{% render 'icon-with-text-list-begin',\n    layout: \"horizontal\", text_only_all_items: false %}\n \n{% render 'icon-with-text-list-item-product-size-chart' %}\n\n{%- render 'icon-with-text-list-item-care-instructions' -%}\n  {%- render 'icon-with-text-list-item-about-us' -%}\n\n{%- render 'icon-with-text-list-item-about-our-products' -%}\n\n{% render 'icon-with-text-list-end' %}\n\n</div>"
           }
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
@@ -86,6 +77,15 @@
             "heading": "Returns",
             "icon": "return",
             "content": "<p>We have a 30-day return policy, which means you have 30 days after receiving your item to request a return. </p><p>For details, please read our <a href=\"/policies/refund-policy\" title=\"Refund Policy\">Return Policy</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MxqzDe": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Sustainability",
+            "icon": "leaf",
+            "content": "<p><a href=\"https://www.gildan.com/\" target=\"_blank\" title=\"Gildan\">Gildan </a>manufactures the T-Shirts we use.</p><p><a href=\"http://www.gildan.com/us/en/sustainability\" target=\"_blank\" title=\"Gildan Sustainability\">Learn more</a> about their sustainability practices.</p><p><a href=\"/pages/about-our-products\" title=\"About our Products\">Learn more</a> about our products.</p><p></p>",
             "page": ""
           }
         },
@@ -106,9 +106,9 @@
         "buy_buttons",
         "description",
         "custom_liquid_MkJcCT",
-        "collapsible-row-0",
         "collapsible-row-1",
         "collapsible_tab_fgtxGB",
+        "collapsible_tab_MxqzDe",
         "share"
       ],
       "settings": {

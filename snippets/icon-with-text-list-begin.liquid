@@ -1,4 +1,4 @@
-{% comment %}
+{%- comment -%}
   Renders the beginning of icon with text list
 
   Accepts:
@@ -17,7 +17,7 @@
   Author:
   FullChestCovers
   
-{% endcomment %}
+{%- endcomment -%}
 {%- liquid
 
 if layout == nil
@@ -34,6 +34,6 @@ if text_only_all_items == nil
 endif
 -%}
 <ul
-  class="icon-with-text icon-with-text--{{ layout }} list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}"
+  class="icon-with-text icon-with-text--{{ layout }} list-unstyled{%- if text_only_all_items -%} icon-with-text--text-only{%- endif -%}"
   {{ shopify_attributes }}
 >

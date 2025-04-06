@@ -74,9 +74,9 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
+            "heading": "Shipping",
             "icon": "truck",
-            "content": "",
+            "content": "<p>We know you want your T-shirts fast—especially when you’re preparing for protests or events. That’s why we’ve partnered with one of the fastest drop shippers available to ensure most orders ship within 2 days.</p><p>For full details, visit our <a href=\"http://fullchestcovers.com/policies/shipping-policy\" target=\"_blank\" title=\"Shipping Policy\">Shipping Policy</a></p>",
             "page": ""
           }
         },

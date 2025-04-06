@@ -1,14 +1,19 @@
 {%- comment -%}
-  Renders a text-with-icon item that links to the about our products page
+  Renders description text consolidated from the blank metadata attached to a product, and the product description.
 
   Accepts:
       nothing
   Usage:
-  {%- render 'icon-with-text-list-item-about-our-products' -%}
+  {%- render 'product-consolidated-description' -%}
 
   Author:
   FullChestCovers
   
 {%- endcomment -%}
-{%- assign anchor_tag = '<a href="https://fullchestcovers.com/pages/about-our-products" title="About Our Products">About Our Products</a>' -%}
-{%- render 'icon-with-text-list-item', icon:"leather", heading: anchor_tag  -%}
+{%- capture consolidated_description -%}
+   {{ product.metafields.custom.product_blank.value.product_description.value }}
+   {{ product.description }}
+{%- endcapture -%}
+{%- if consolidated_description != empty and consolidated_description != blank -%}
+  {{ consolidated_description }}
+{%- endif -%}

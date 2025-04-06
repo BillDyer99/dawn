@@ -1,0 +1,23 @@
+{%- comment -%}
+  Renders feature text consolidated from the blank and design metadata attached to a product
+
+  Accepts:
+      nothing
+  Usage:
+  {%- render 'product-consolidated-features' -%}
+
+  Author:
+  FullChestCovers
+  
+{%- endcomment -%}
+{%- comment -%}
+The features are displayed in order from most specific (design) to least specific (blank)
+{%- endcomment -%}
+{%- capture consolidated_summary -%}
+  {{ product.metafields.custom.product_design.value.features.value }}
+  {{ product.metafields.custom.product_blank.value.product_features.value }}
+{%- endcapture -%}
+{%- if consolidated_summary != empty and consolidated_summary != blank -%}
+  {{ consolidated_summary }}
+{%- endif -%}
+ 

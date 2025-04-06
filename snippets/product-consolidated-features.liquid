@@ -1,5 +1,5 @@
 {%- comment -%}
-  Renders feature text consolidated from the blank and design metadata attached to a product
+  Renders feature text consolidated from the blank and design metadata attached to a product, and the features for the product.
 
   Accepts:
       nothing
@@ -14,6 +14,7 @@
 The features are displayed in order from most specific (design) to least specific (blank)
 {%- endcomment -%}
 {%- capture consolidated_features -%}
+  {{ product.metafields.custom.product_features.value }}
   {{ product.metafields.custom.product_design.value.features.value }}
   {{ product.metafields.custom.product_blank.value.product_features.value }}
 {%- endcapture -%}

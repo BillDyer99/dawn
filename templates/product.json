@@ -76,7 +76,7 @@
           "settings": {
             "heading": "Shipping",
             "icon": "truck",
-            "content": "<p>Free shipping on orders $50 or more!</p><p>We know you want your T-shirts fast—especially when you’re preparing for protests or events. That’s why we’ve partnered with one of the fastest drop shippers available to ensure most orders ship within 2 days.</p><p>For full details, visit our <a href=\"http://fullchestcovers.com/policies/shipping-policy\" target=\"_blank\" title=\"Shipping Policy\">Shipping Policy</a></p>",
+            "content": "<p>Free shipping on orders $50 or more!</p><p><a href=\"http://fullchestcovers.com/policies/shipping-policy\" target=\"_blank\" title=\"Shipping Policy\">Shipping</a> calculated at checkout.</p><p>We know you want your T-shirts fast—especially when you’re preparing for protests or events. That’s why we’ve partnered with one of the fastest drop shippers available to ensure most orders ship within 2 days.</p><p>For full details, visit our <a href=\"http://fullchestcovers.com/policies/shipping-policy\" target=\"_blank\" title=\"Shipping Policy\">Shipping Policy</a></p>",
             "page": ""
           }
         },

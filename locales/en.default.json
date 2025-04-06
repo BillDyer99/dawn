@@ -186,7 +186,7 @@
       "taxes_included": "Taxes included.",
       "duties_included": "Duties included.",
       "duties_and_taxes_included": "Duties and taxes included.",
-      "shipping_policy_html": "<p style=\"color:red;\">Free shipping on orders $50 or more! </p><a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+      "shipping_policy_html": "<div style=\"color:red;\">Free shipping on orders $50 or more! </div><a href=\"{{ link }}\">Shipping</a> calculated at checkout."
     },
     "modal": {
       "label": "Media gallery"

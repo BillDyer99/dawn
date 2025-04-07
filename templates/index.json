@@ -44,7 +44,8 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify://shop_images/shutterstock_1136208854_normalize_to_palette_3000_wide.png",
+        "image_overlay_opacity": 50,
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",

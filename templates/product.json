@@ -100,13 +100,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "text_pa7Qnt": {
-          "type": "text",
-          "settings": {
-            "text": "Details",
-            "text_style": "subtitle"
-          }
         }
       },
       "block_order": [
@@ -123,8 +116,7 @@
         "collapsible_tab_MxqzDe",
         "collapsible-row-1",
         "collapsible_tab_fgtxGB",
-        "share",
-        "text_pa7Qnt"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -142,10 +134,20 @@
         "padding_bottom": 12
       }
     },
+    "custom_liquid_KJCzN3": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<h2 \n  class=\"title inline-richtext h1\" \n  style=\"padding-top:0;padding-bottom:0;\"\n>\n          Details\n        </h2>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_liquid_Pgxmyt": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n    <div class=\"product product--large product--left product--thumbnail_slider product--mobile-hide grid grid--1-col grid--2-col-tablet\">\n      <div class=\"grid__item product__media-wrapper\">\n<media-gallery id=\"MediaGallery-template--19270325502177__main\" role=\"region\" class=\"product__column-sticky\" aria-label=\"Gallery Viewer\" data-desktop-layout=\"thumbnail_slider\">\n<slider-component id=\"GalleryThumbnails-template--19270325502177__main\" class=\"thumbnail-slider slider-mobile-gutter quick-add-hidden small-hide\">\n<ul id=\"Slider-Thumbnails-template--19270325502177__main\" class=\"thumbnail-list list-unstyled slider slider--mobile slider--tablet-up\">\n<li id=\"Slide-Thumbnails-template--19270325502177__main-0\" class=\"thumbnail-list__item slider__slide\" data-target=\"template--19270325502177__main-36839991017697\" data-media-position=\"1\">\n<button class=\"thumbnail global-media-settings global-media-settings--no-shadow\" aria-label=\"Load image 1 in gallery view\" aria-controls=\"GalleryViewer-template--19270325502177__main\" aria-describedby=\"Thumbnail-template--19270325502177__main-0\">\n              <img src=\"//cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=416\" alt=\"We need a new Party - Future of the Democratic Party - Men's T-Shirt - black\" srcset=\"//cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=54 54w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=74 74w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=104 104w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=162 162w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=208 208w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=324 324w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=416 416w\" width=\"416\" height=\"416\" loading=\"lazy\" sizes=\"(min-width: 1200px) calc((715 - 4rem) / 4),\n          (min-width: 990px) calc((65.0vw - 4rem) / 4),\n          (min-width: 750px) calc((100vw - 15rem) / 8),\n          calc((100vw - 8rem) / 3)\" id=\"Thumbnail-template--19270325502177__main-0\">\n\t\t  <span>Men</span>\n            </button>\n          </li>\n\t\t  <li id=\"Slide-Thumbnails-template--19270325502177__main-2\" class=\"thumbnail-list__item slider__slide\" data-target=\"template--19270325502177__main-36839991050465\" data-media-position=\"2\">\n\t\t  <button class=\"thumbnail global-media-settings global-media-settings--no-shadow\" aria-label=\"Load image 2 in gallery view\" aria-controls=\"GalleryViewer-template--19270325502177__main\" aria-describedby=\"Thumbnail-template--19270325502177__main-2\">\n                <img src=\"//cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=416\" alt=\"We need a new Party - Future of the Democratic Party - Men's T-Shirt - deep heather\" srcset=\"//cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=54 54w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=74 74w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=104 104w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=162 162w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=208 208w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=324 324w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=416 416w\" width=\"416\" height=\"416\" loading=\"lazy\" sizes=\"(min-width: 1200px) calc((715 - 4rem) / 4),\n          (min-width: 990px) calc((65.0vw - 4rem) / 4),\n          (min-width: 750px) calc((100vw - 15rem) / 8),\n          calc((100vw - 8rem) / 3)\" id=\"Thumbnail-template--19270325502177__main-2\">\n\t\t                </button>\n            </li>\n\t\t\t</ul>\n    </slider-component>\n</media-gallery>\n</div>\n</div>\n</div>",
+        "custom_liquid": "<div class=\"page-width\">\n\n    <div class=\"product product--large product--left product--thumbnail_slider product--mobile-hide grid grid--1-col grid--2-col-tablet\">\n      <div class=\"grid__item product__media-wrapper\">\n<media-gallery id=\"MediaGallery-template--19270325502177__main\" role=\"region\" class=\"product__column-sticky\" aria-label=\"Gallery Viewer\" data-desktop-layout=\"thumbnail_slider\">\n<slider-component id=\"GalleryThumbnails-template--19270325502177__main\" class=\"thumbnail-slider slider-mobile-gutter quick-add-hidden small-hide\">\n<ul id=\"Slider-Thumbnails-template--19270325502177__main\" class=\"thumbnail-list list-unstyled slider slider--mobile slider--tablet-up\">\n<li id=\"Slide-Thumbnails-template--19270325502177__main-0\" class=\"thumbnail-list__item slider__slide\" data-target=\"template--19270325502177__main-36839991017697\" data-media-position=\"1\">\n<button class=\"thumbnail global-media-settings global-media-settings--no-shadow\" aria-label=\"Load image 1 in gallery view\" aria-controls=\"GalleryViewer-template--19270325502177__main\" aria-describedby=\"Thumbnail-template--19270325502177__main-0\">\n              <img src=\"//cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=416\" alt=\"We need a new Party - Future of the Democratic Party - Men's T-Shirt - black\" srcset=\"//cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=54 54w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=74 74w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=104 104w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=162 162w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=208 208w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=324 324w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_0a58007c-3e62-4bd8-9e11-e0756d19325d.png?v=1742158119&amp;width=416 416w\" width=\"416\" height=\"416\" loading=\"lazy\" sizes=\"(min-width: 1200px) calc((715 - 4rem) / 4),\n          (min-width: 990px) calc((65.0vw - 4rem) / 4),\n          (min-width: 750px) calc((100vw - 15rem) / 8),\n          calc((100vw - 8rem) / 3)\" id=\"Thumbnail-template--19270325502177__main-0\">\n\t\t  <span>Men</span>\n            </button>\n          </li>\n\t\t  <li id=\"Slide-Thumbnails-template--19270325502177__main-2\" class=\"thumbnail-list__item slider__slide\" data-target=\"template--19270325502177__main-36839991050465\" data-media-position=\"2\">\n\t\t  <button class=\"thumbnail global-media-settings global-media-settings--no-shadow\" aria-label=\"Load image 2 in gallery view\" aria-controls=\"GalleryViewer-template--19270325502177__main\" aria-describedby=\"Thumbnail-template--19270325502177__main-2\">\n                <img src=\"//cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=416\" alt=\"We need a new Party - Future of the Democratic Party - Men's T-Shirt - deep heather\" srcset=\"//cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=54 54w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=74 74w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=104 104w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=162 162w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=208 208w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=324 324w, //cdn.shopify.com/s/files/1/0746/1896/2145/files/1_e23625db-7a93-4eb4-868d-91d082220d61.png?v=1742158119&amp;width=416 416w\" width=\"416\" height=\"416\" loading=\"lazy\" sizes=\"(min-width: 1200px) calc((715 - 4rem) / 4),\n          (min-width: 990px) calc((65.0vw - 4rem) / 4),\n          (min-width: 750px) calc((100vw - 15rem) / 8),\n          calc((100vw - 8rem) / 3)\" id=\"Thumbnail-template--19270325502177__main-2\">\n\t\t                </button>\n            </li>\n\t\t\t</ul>\n    </slider-component>\n</media-gallery>\n</div>\n</div>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -154,7 +156,7 @@
     "custom_liquid_AEqiac": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{%- liquid\n    assign columns = 2\n    assign button_label = \"\"\n    assign button_link = \"\"\n%}\n\n{%- capture description_text -%}\n\n{%- render 'product-consolidated-description' -%}\n{%- endcapture -%}\n \n{%- capture feature_text -%}\n      {%- render 'product-consolidated-features' -%}\n{%- endcapture -%}\n\n{%- render 'multicolumn-begin', title : 'Product Details', column_count: columns , columns_mobile: columns ,\ncolumns_desktop: columns,\nbutton_label: button_label,\nbutton_link: button_link  -%}\n\n{%- render 'multicolumn-column', title: 'Description', text: description_text -%}\n\n{%- render 'multicolumn-column', title: 'Features', text: feature_text -%}\n\n{%- render 'multicolumn-end', button_label: button_label,\nbutton_link: button_link,\ncolumn_count: column_count -%}",
+        "custom_liquid": "{%- liquid\n    assign columns = 2\n    assign button_label = \"\"\n    assign button_link = \"\"\n%}\n\n{%- capture description_text -%}\n\n{%- render 'product-consolidated-description' -%}\n{%- endcapture -%}\n \n{%- capture feature_text -%}\n      {%- render 'product-consolidated-features' -%}\n{%- endcapture -%}\n\n{%- render 'multicolumn-begin', title : 'Details', column_count: columns , columns_mobile: columns ,\ncolumns_desktop: columns,\nbutton_label: button_label,\nbutton_link: button_link  -%}\n\n{%- render 'multicolumn-column', title: 'Description', text: description_text -%}\n\n{%- render 'multicolumn-column', title: 'Features', text: feature_text -%}\n\n{%- render 'multicolumn-end', button_label: button_label,\nbutton_link: button_link,\ncolumn_count: column_count -%}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -181,6 +183,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_KJCzN3",
     "custom_liquid_Pgxmyt",
     "custom_liquid_AEqiac",
     "related-products"

@@ -31,11 +31,9 @@ if product.tags contains 'Women'
 	assign style-tag = 'Women'
 endif
  
- 
 assign delimiter = ','
 assign matching-styles = '' 
 assign all-styles-array = 'Men,Women,Youth' | split: delimiter
-
 
 paginate collections["all"].products by 3000
 	for collection-product in collections.all.products

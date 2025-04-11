@@ -1,31 +1,14 @@
 {%- comment -%}
-  Renders feature text consolidated from the blank and design metadata attached to a product, and the features for the product.
+  Renders an array of style names and product handles for complementary product styles.
+  The three existing styles are 'Men','Women', and 'Youth'
 
   Accepts:
       product {Product} - The product to find complementary styles for
   Usage:
-  {%- render 'product-complementary-style-product-handles' -%}
+  {%- render 'product-complementary-style-product-handles', product: product -%}
 
   Author:
   FullChestCovers
-  
-{%- endcomment -%}
-{%- comment -%}
-// use the highest among all the columns  	  
-image_aspect_ratio	  
-
-image default blank
-title default blank
-text default blank
-link_label default blank
-link default blank
-button_link default blank
-column_alignment default "left" options "left", "center"
-shopify_attributes default blank
-image_ratio default "adapt", options: "adapt","portrait","square","circle",
-image_width default "full", options: "full","third","half",
-spacing_grid_horizontal default 0? 1?
-page_width default ? 
   
 {%- endcomment -%}
 {%- liquid

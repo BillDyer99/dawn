@@ -1,0 +1,41 @@
+
+{%- liquid
+ 
+assign output-test = blank
+assign style-tag = blank
+if product.tags contains 'Men'
+	assign style-tag = 'Men'
+endif
+if product.tags contains 'Youth'
+	assign style-tag = 'Youth'
+endif
+if product.tags contains 'Women'
+	assign style-tag = 'Women'
+endif
+ 
+ 
+assign delimiter = ','
+assign matching-styles = '' 
+assign all-styles-array = 'Men,Women,Youth' | split: delimiter
+
+
+paginate collections["all"].products by 3000
+	for collection-product in collections.all.products
+		if collection-product.metafields.custom.product_design.value.Identity.value == product.metafields.custom.product_design.value.Identity.value
+			if collection-product.metafields.custom.product_design.value.Modification.value == blank
+				for one-style in all-styles-array
+					if collection-product.tags contains one-style and style-tag != one-style
+						unless matching-styles == ''
+							assign matching-styles = matching-styles | append: delimiter
+						endunless
+						assign matching-styles = matching-styles | append: one-style
+						assign matching-styles = matching-styles | append: delimiter
+						assign matching-styles = matching-styles | append: collection-product.handle
+					endif				
+				endfor 
+			endif
+		endif
+	endfor
+endpaginate
+-%}
+{{ matching-styles }}

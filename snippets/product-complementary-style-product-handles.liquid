@@ -1,9 +1,15 @@
 {%- comment -%}
-  Renders an array of style names and product handles for complementary product styles.
-  The three existing styles are 'Men','Women', and 'Youth'
+  Renders an comma delimited string of style names and product handles for complementary product styles.
+  The three existing styles are 'Men','Women', and 'Youth'.  This snippet will write out
+  details for the two products that 'complement' the product passed in.
+  The format is "style_name, product_handle, style_name, product_handle"
+
+  Example Output:
+      Women,we-need-a-new-party-ladies-t-shirt,Youth,we-need-a-new-party-youth-t-shirt
 
   Accepts:
       product {Product} - The product to find complementary styles for
+      
   Usage:
   {%- render 'product-complementary-style-product-handles', product: product -%}
 

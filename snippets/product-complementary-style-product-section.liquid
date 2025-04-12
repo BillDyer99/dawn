@@ -1,0 +1,127 @@
+{% style %}
+.fcc-alternate-designs-thumbnail-section-container 
+{
+	display: flex;
+	justify-content: center; /* horizontally */
+}
+
+.fcc-alternate-designs-thumbnails-container 
+{
+    display:inline-block;
+}
+
+.fcc-alternate-designs-thumbnails-list
+{
+    display: flex;
+	flex-basis: 0%;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-wrap: nowrap;
+	padding: 5px;
+	row-gap: 10px;
+	column-gap: 10px;
+}
+
+ul.fcc-alternate-designs-thumbnails-list
+{
+    list-style-image: none;
+	list-style-type: none;
+	list-style-position: outside;
+}
+
+.fcc-alternate-designs-thumbnails-item
+{
+	flex-shrink: 0;	
+}
+
+li.fcc-alternate-designs-thumbnails-item
+{
+    display:list-item;
+    list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	text-align:left;
+}
+
+.fcc-alternate-designs-thumbnails-item-header
+{
+    text-decoration: none;
+}
+
+.fcc-alternate-designs-thumbnails-item-image
+{
+}
+
+.fcc-alternate-designs-thumbnails-item button
+{
+	border-radius: 30px;
+	border-width: 5px;
+}
+
+.fcc-alternate-designs-thumbnails-item button a ,
+.fcc-alternate-designs-thumbnails-item button a:link ,
+.fcc-alternate-designs-thumbnails-item button a:active ,
+.fcc-alternate-designs-thumbnails-item button a:hover ,
+.fcc-alternate-designs-thumbnails-item button a:visited 
+{
+      text-decoration: none;
+}
+
+
+{% endstyle %}
+
+
+{%- assign delimiter = ',' -%}
+{% capture complementary-product-string %}
+   {%- render 'product-complementary-style-product-handles', product: product -%}
+{% endcapture %}
+{%- assign complementary-product-details-array = complementary-product-string | split: delimiter -%}
+
+{% liquid
+
+assign complementary-style-product-1-style-name = complementary-product-details-array[0]
+assign complementary-style-product-1 = all_products[complementary-product-details-array[1]]
+assign complementary-style-product-1-url = complementary-style-product-1.url
+assign complementary-style-product-1-featured-image-url = complementary-style-product-1.featured_image | image_url: width: 200 
+
+assign complementary-style-product-2-style-name = complementary-product-details-array[2]
+assign complementary-style-product-2 = all_products[complementary-product-details-array[3]]
+assign complementary-style-product-2-url = complementary-style-product-2.url
+assign complementary-style-product-2-featured-image-url = complementary-style-product-2.featured_image | image_url: width: 200
+
+assign complementary-style-product-image-width = 200
+
+%}
+<div class='fcc-alternate-designs-thumbnail-section-container' >
+    <div class='fcc-alternate-designs-thumbnails-container' >
+	    <ul class='fcc-alternate-designs-thumbnails-list'>
+			<li class='fcc-alternate-designs-thumbnails-item'>
+			    <button>
+			    <a href="{{ complementary-style-product-1-url }}">
+				    <div class='fcc-alternate-designs-thumbnails-item-header'><h3 class='inline-richtext h3'>{{ complementary-style-product-1-style-name }}</h3></div>
+					<div class='fcc-alternate-designs-thumbnails-item-image'>
+					<img src="{{ complementary-style-product-1-featured-image-url }}?width={{ complementary-style-product-image-width }}" alt="{{ complementary-style-product-1.name }}" width="{{ complementary-style-product-image-width }}" loading="lazy" />
+					</div>
+				</a>
+				</button>
+			</li>	
+			<li class='fcc-alternate-designs-thumbnails-item'>
+			   <button>
+			    <a href="{{ complementary-style-product-2-url }}">
+				    <div class='fcc-alternate-designs-thumbnails-item-header'><h3 class=' inline-richtext h3'>{{ complementary-style-product-2-style-name }}</h3></div>
+					<div class='fcc-alternate-designs-thumbnails-item-image'>
+						<img src="{{ complementary-style-product-2-featured-image-url }}?width={{ complementary-style-product-image-width }}" alt="{{ complementary-style-product-2.name }}" width="{{ complementary-style-product-image-width }}"  loading="lazy" />
+		            </div>
+			    </a>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+

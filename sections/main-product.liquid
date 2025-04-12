@@ -2260,9 +2260,8 @@
   ]
 }
 {% endschema %}
- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-      $("media-gallery").append($('div.fcc-alternate-designs-thumbnail-section-container'));
-    });
-    </script>
+<script>
+  let alternateStylesSection = document.querySelector('div.fcc-alternate-designs-thumbnail-section-container');
+  let mediaGallery = document.querySelector('media-gallery');
+  mediaGallery.appendChild(alternateStylesSection);  
+</script>

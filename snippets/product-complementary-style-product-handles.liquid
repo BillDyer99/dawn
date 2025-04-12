@@ -34,7 +34,8 @@ endif
 assign delimiter = ','
 assign matching-styles = '' 
 assign all-styles-array = 'Men,Women,Youth' | split: delimiter
-
+assign all-styles-text-array = 'Adult,Women,Children' | split: delimiter
+   
 paginate collections["all"].products by 3000
 	for collection-product in collections.all.products
 		if collection-product.metafields.custom.product_design.value.Identity.value == product.metafields.custom.product_design.value.Identity.value
@@ -44,7 +45,7 @@ paginate collections["all"].products by 3000
 						unless matching-styles == ''
 							assign matching-styles = matching-styles | append: delimiter
 						endunless
-						assign matching-styles = matching-styles | append: one-style
+						assign matching-styles = matching-styles | append: all-styles-text-array[forloop.index0]
 						assign matching-styles = matching-styles | append: delimiter
 						assign matching-styles = matching-styles | append: collection-product.handle
 					endif				

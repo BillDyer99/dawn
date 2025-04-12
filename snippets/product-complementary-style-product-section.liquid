@@ -83,7 +83,7 @@ li.fcc-alternate-designs-thumbnails-item
 
 assign design-id = product.metafields.custom.product_design.value.Identity.value
 assign has-design = true
-if x == blank 
+if design-id == blank 
     assign has-design = false
 endif
   

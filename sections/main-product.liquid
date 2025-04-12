@@ -2260,8 +2260,10 @@
   ]
 }
 {% endschema %}
-<script>
-  let alternateStylesSection = document.querySelector('div.fcc-alternate-designs-thumbnail-section-container');
-  let mediaGallery = document.querySelector('media-gallery');
-  mediaGallery.appendChild(alternateStylesSection);  
+<script>	
+  document.addEventListener('DOMContentLoaded', function() {
+    let alternateStylesSection = document.querySelector('div.fcc-alternate-designs-thumbnail-section-container');
+    let mediaGallery = document.querySelector('media-gallery');
+    mediaGallery.appendChild(alternateStylesSection);  
+  });  
 </script>

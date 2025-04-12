@@ -87,17 +87,17 @@ if design-id == blank
     assign has-design = false
 endif
   
-assign complementary-style-product-image-width = 200
+assign complementary-style-product-image-width = 150
   
 assign complementary-style-product-1-style-name = complementary-product-details-array[0]
 assign complementary-style-product-1 = all_products[complementary-product-details-array[1]]
 assign complementary-style-product-1-url = complementary-style-product-1.url
-assign complementary-style-product-1-featured-image-url = complementary-style-product-1.featured_image | image_url: width: 200 
+assign complementary-style-product-1-featured-image-url = complementary-style-product-1.featured_image | image_url: width: complementary-style-product-image-width 
 
 assign complementary-style-product-2-style-name = complementary-product-details-array[2]
 assign complementary-style-product-2 = all_products[complementary-product-details-array[3]]
 assign complementary-style-product-2-url = complementary-style-product-2.url
-assign complementary-style-product-2-featured-image-url = complementary-style-product-2.featured_image | image_url: width: 200
+assign complementary-style-product-2-featured-image-url = complementary-style-product-2.featured_image | image_url: width: complementary-style-product-image-width
   
 %}
 {% if has-design == true %}

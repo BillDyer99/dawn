@@ -71,7 +71,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>And we think we can.</p><p>Sure, we just sell T-Shirts. </p><p>For those that want to stop our country from devolving into fascism, unifying is critically important. Our numbers are our protection.  Showing marginalized and targeted people that you are a safe person is critically important.  Prompting conversation from people just starting to understand what is really happening is important.  Countering the narrative of state propoganda is important.  Inspiring others to take action is important.  And sometimes, when you just can't deal with the stupidity of it all any more, it can be good for your mental health to vent.<br/><br/>T-Shirts can help with all of these things.<br/><br/>So, yeah. We CAN make a difference.</p><p>  </p><p></p><p></p>"
+            "text": "<p>And we think we can.</p><p>Sure, we just sell T-Shirts. </p><p>T-Shirts communicate for you when you aren't speaking, and in places you wouldn't normally talk too much.  For example grocery stores.  And all of our shirts have a message designed to help get us out of this stupidocracy we find ourselves in.</p><p><a href=\"https://fullchestcovers.com/pages/about-us\" title=\"About us\">Learn more about the ways T-Shirts can help.</a></p><p>So, yeah. We CAN make a difference.</p><p><br/></p><p><br/></p><p>  </p><p></p><p></p>"
           }
         }
       },
@@ -86,87 +86,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "men"
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -219,6 +138,34 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
         "padding_bottom": 36
       }
     },
@@ -301,10 +248,8 @@
   "order": [
     "image_banner",
     "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
     "multicolumn",
+    "featured_collection",
     "17427639837839301f",
     "featured_product_EAKWDK"
   ]

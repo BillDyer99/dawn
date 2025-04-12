@@ -82,11 +82,11 @@ assign complementary-style-product-2-featured-image-url = complementary-style-pr
 	    <ul class='fcc-alternate-designs-thumbnails-list'>
 			<li class='fcc-alternate-designs-thumbnails-item'>
 			    <div class='fcc-alternate-designs-thumbnails-item-header'><h3 class='inline-richtext h3'>{{ complementary-style-product-1-style-name }}</h3></div>
-                 {% render 'card-product', card_product: complementary-style-product-1, lazy_load: false, horizontal_class: false, show_secondary_image: true %}
+                 {% render 'card-product', card_product: complementary-style-product-1, extend-height: false, lazy_load: false, horizontal_class: false, show_secondary_image: true %}
 			</li>	
 			<li class='fcc-alternate-designs-thumbnails-item'>
 			    <div class='fcc-alternate-designs-thumbnails-item-header'><h3 class='inline-richtext h3'>{{ complementary-style-product-2-style-name }}</h3></div>
-                 {% render 'card-product', card_product: complementary-style-product-2, lazy_load: false, horizontal_class: false, show_secondary_image: true %}
+                 {% render 'card-product', card_product: complementary-style-product-2,  extend-height: false, lazy_load: false, horizontal_class: false, show_secondary_image: true %}
 			</li>
 		</ul>
 	</div>

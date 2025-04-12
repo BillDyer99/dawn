@@ -81,6 +81,12 @@ li.fcc-alternate-designs-thumbnails-item
 
 {% liquid
 
+assign design-id = product.metafields.custom.product_design.value.Identity.value
+assign has-design-id = true
+if x == blank 
+    assign has-design-id = false
+endif
+  
 assign complementary-style-product-image-width = 200
   
 assign complementary-style-product-1-style-name = complementary-product-details-array[0]

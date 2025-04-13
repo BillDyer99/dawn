@@ -64,14 +64,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "We want to make a difference",
+            "heading": "Say it with your Full Chest",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>And we think we can. With T-Shirts. </p><p>T-Shirts communicate for you when you aren't speaking, and in places you wouldn't normally talk too much.  For example grocery stores.  And all of our shirts have a message designed to help get us out of this mess we find ourselves in.  We are going to have to unify, educate, and inspire each other.  T-Shirts can do that.</p><p><a href=\"https://fullchestcovers.com/pages/about-us\" title=\"About us\">Learn more about the ways T-Shirts can help.</a></p><p>So, yeah. We think we CAN make a difference. With T-Shirts.</p><p><br/></p><p><br/></p><p>  </p><p></p><p></p>"
+            "text": "<p>There are two kinds of people in America:</p><p>Those that hate what's happening and those who hate what's happening and don't know it yet.</p><p>Wear your message on your chest.  It can go with you anywhere and everywhere.  Let's make sure everyone knows.</p>"
           }
         }
       },
@@ -82,7 +82,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0
@@ -162,7 +162,7 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,

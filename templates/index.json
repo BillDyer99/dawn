@@ -122,28 +122,28 @@
         "column_fRGLVD": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "title": "<strong>Our Values</strong>",
+            "text": "<p><strong>Anti-Fascist<br/></strong>Because history has shown us the dangers of unchecked power.</p><p></p><p><strong>Anti-Oligarch</strong><br/>Because democracy belongs to the people, not the billionaires.</p><p></p><p><strong>Pro-Democracy</strong><br/>Because voting, free speech, and human rights matter.</p>",
+            "link_label": "Learn More",
+            "link": "shopify://pages/about-us"
           }
         },
         "column_cV8t3w": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "title": "<strong>Wear the Message.  Be the Change</strong>",
+            "text": "<ul><li>Signal Safety & Solidarity</li><li>Spark Conversation</li><li>Build Community</li><li>Take Action</li><li>Inspire Others</li><li>Make a Statement</li></ul>",
+            "link_label": "Learn More",
+            "link": "shopify://pages/about-us"
           }
         },
         "column_Bjbjxh": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "title": "<strong>Quality</strong>",
+            "text": "<p>✅ Brand:<a href=\"http://www.gildan.com/\" target=\"_blank\" title=\"Gildan\">Gildan</a>✅ Fabric Weight: 6 oz (heavyweight)<br/>✅ Material: 100% preshrunk cotton (Heather Gray: 90% cotton / 10% polyester; Deep Heather: 50% cotton / 50% polyester)<br/>✅ Construction: Double-needle stitching, narrow ribbed neck for durability<br/>✅ Production: Imported fabric, printed & processed in the USA<br/>✅ Sustainable: Gildan supports sustainability through ethical production and environmental responsibility.<br/><br/></p>",
+            "link_label": "Learn More",
+            "link": "shopify://pages/about-our-products"
           }
         }
       },
@@ -153,7 +153,7 @@
         "column_Bjbjxh"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "Us",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",

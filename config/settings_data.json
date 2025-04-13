@@ -393,8 +393,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      ".multicolumn.background-primary .multicolumn-card {background: rgb(var(--color-background)); background: var(--gradient-background); background-attachment: fixed;}"
-    ]
+    "custom_css": []
   }
 }

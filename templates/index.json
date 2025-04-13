@@ -141,7 +141,7 @@
           "type": "column",
           "settings": {
             "title": "<strong>Quality</strong>",
-            "text": "<p>✅ Brand:<a href=\"http://www.gildan.com/\" target=\"_blank\" title=\"Gildan\">Gildan</a>✅ Fabric Weight: 6 oz (heavyweight)<br/>✅ Material: 100% preshrunk cotton (Heather Gray: 90% cotton / 10% polyester; Deep Heather: 50% cotton / 50% polyester)<br/>✅ Construction: Double-needle stitching, narrow ribbed neck for durability<br/>✅ Production: Imported fabric, printed & processed in the USA<br/>✅ Sustainable: Gildan supports sustainability through ethical production and environmental responsibility.<br/><br/></p>",
+            "text": "<p>✅ Brand:<a href=\"http://www.gildan.com/\" target=\"_blank\" title=\"Gildan\">Gildan</a></p><p>✅ Fabric Weight: 6 oz (heavyweight)<br/>✅ Material: 100% preshrunk cotton </p><p>Except for<br/>    Heather Gray:<br/>&nbsp;&nbsp;&nbsp;&nbsp;90% cotton / 10% polyester </p><p>Deep Heather: <br/>    50% cotton / 50% polyester<br/>✅ Construction: <br/>Double-needle stitching<br/>narrow ribbed neck for durability<br/>✅ Production<br/>Imported fabric<br/>Printed & processed in the USA<br/>✅ Sustainable:<br/>Gildan supports sustainability through ethical production and environmental responsibility.<br/><br/></p>",
             "link_label": "Learn More",
             "link": "shopify://pages/about-our-products"
           }
